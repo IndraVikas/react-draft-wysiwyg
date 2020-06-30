@@ -63,7 +63,7 @@ class Suggestion {
         if (index >= 0) {
           const mentionText = text.substr(index + preText.length, text.length);
           const suggestionsList = getSuggestions();
-          const suggestionPresent = suggestionsList && getAllSuggestion.some(suggestion => {
+          const suggestionPresent = suggestionsList && suggestionsList.some(suggestion => {
             if (suggestion.value) {
               if (this.config.caseSensitive) {
                 return suggestion.value.indexOf(mentionText) >= 0;
